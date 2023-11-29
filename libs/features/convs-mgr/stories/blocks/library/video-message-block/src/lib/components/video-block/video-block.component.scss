@@ -1,25 +1,27 @@
 mat-card {
   min-width: 200px;
-  position: relative;
 }
 
 form {
-  padding-top: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 input {
-  max-width: 100%;
-  margin: 5px 0;
-  border: none;
-  border-radius: 15px;
-  background-color: var(--convs-mgr-placeholder-color);
-  resize: none;
+  box-sizing: border-box;
+  min-width: calc(100% - 20px) !important; // minus the padding
   padding: 10px;
+  border: none;
+  resize: none;
+  outline: none;
+  border-radius: 0.6rem;
+  background-color: var(--convs-mgr-placeholder-color);
 }
 
-input:focus {
-  border: none;
-  outline: none;
+input:focus-visible {
+  border: 1px solid var(--convs-mgr-color-primary-black);
+  outline-color: var(--convs-mgr-color-primary-black);
 }
 
 .video-wrapper {
@@ -47,14 +49,14 @@ video {
   object-fit: cover;
 }
 
-img{
-	width: 1.8rem;
-	height: 1.8rem;
+img {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
-.fa-video{
+.fa-video {
   width: 1.3rem;
-	height: 1.3rem;
+  height: 1.3rem;
   transform: translateY(-50%);
   color: black;
 }
